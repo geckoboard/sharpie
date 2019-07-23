@@ -8,10 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		021555AF22E5D3CE003CD367 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 021555AE22E5D3CE003CD367 /* main.cpp */; };
+		021555B622E5DB6B003CD367 /* Info.plist in CopyFiles */ = {isa = PBXBuildFile; fileRef = 021555B522E5D3FF003CD367 /* Info.plist */; };
+		021555C922E60137003CD367 /* create_marker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 021555B722E5FE13003CD367 /* create_marker.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		021555D622E60D0A003CD367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 021555A322E5D3CE003CD367 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 021555BC22E5FEB2003CD367;
+			remoteInfo = "create-marker";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		021555A922E5D3CE003CD367 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				021555B622E5DB6B003CD367 /* Info.plist in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		021555BB22E5FEB2003CD367 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +47,21 @@
 /* Begin PBXFileReference section */
 		021555AB22E5D3CE003CD367 /* sharpie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sharpie; sourceTree = BUILT_PRODUCTS_DIR; };
 		021555AE22E5D3CE003CD367 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		021555B522E5D3FF003CD367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		021555B722E5FE13003CD367 /* create_marker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = create_marker.cpp; sourceTree = "<group>"; };
+		021555BD22E5FEB2003CD367 /* create-marker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "create-marker"; sourceTree = BUILT_PRODUCTS_DIR; };
+		021555CE22E606BF003CD367 /* Makefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; usesTabs = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		021555A822E5D3CE003CD367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		021555BA22E5FEB2003CD367 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,14 +75,17 @@
 			isa = PBXGroup;
 			children = (
 				021555AD22E5D3CE003CD367 /* sharpie */,
+				021555BE22E5FEB2003CD367 /* create-marker */,
 				021555AC22E5D3CE003CD367 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		021555AC22E5D3CE003CD367 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				021555AB22E5D3CE003CD367 /* sharpie */,
+				021555BD22E5FEB2003CD367 /* create-marker */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,11 +94,39 @@
 			isa = PBXGroup;
 			children = (
 				021555AE22E5D3CE003CD367 /* main.cpp */,
+				021555B522E5D3FF003CD367 /* Info.plist */,
+				021555CE22E606BF003CD367 /* Makefile */,
 			);
 			path = sharpie;
 			sourceTree = "<group>";
 		};
+		021555BE22E5FEB2003CD367 /* create-marker */ = {
+			isa = PBXGroup;
+			children = (
+				021555B722E5FE13003CD367 /* create_marker.cpp */,
+			);
+			path = "create-marker";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		021555D222E60CDA003CD367 /* all-markers */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 021555D322E60CDB003CD367 /* Build configuration list for PBXLegacyTarget "all-markers" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/mattbutton/Documents/sharpie/sharpie;
+			dependencies = (
+				021555D722E60D0A003CD367 /* PBXTargetDependency */,
+			);
+			name = "all-markers";
+			passBuildSettingsInEnvironment = 1;
+			productName = "all-markers";
+		};
+/* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
 		021555AA22E5D3CE003CD367 /* sharpie */ = {
@@ -82,6 +146,23 @@
 			productReference = 021555AB22E5D3CE003CD367 /* sharpie */;
 			productType = "com.apple.product-type.tool";
 		};
+		021555BC22E5FEB2003CD367 /* create-marker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 021555C122E5FEB2003CD367 /* Build configuration list for PBXNativeTarget "create-marker" */;
+			buildPhases = (
+				021555B922E5FEB2003CD367 /* Sources */,
+				021555BA22E5FEB2003CD367 /* Frameworks */,
+				021555BB22E5FEB2003CD367 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "create-marker";
+			productName = "create-marker";
+			productReference = 021555BD22E5FEB2003CD367 /* create-marker */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +173,12 @@
 				ORGANIZATIONNAME = Geckoboard;
 				TargetAttributes = {
 					021555AA22E5D3CE003CD367 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					021555BC22E5FEB2003CD367 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					021555D222E60CDA003CD367 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -109,6 +196,8 @@
 			projectRoot = "";
 			targets = (
 				021555AA22E5D3CE003CD367 /* sharpie */,
+				021555BC22E5FEB2003CD367 /* create-marker */,
+				021555D222E60CDA003CD367 /* all-markers */,
 			);
 		};
 /* End PBXProject section */
@@ -122,7 +211,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		021555B922E5FEB2003CD367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				021555C922E60137003CD367 /* create_marker.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		021555D722E60D0A003CD367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 021555BC22E5FEB2003CD367 /* create-marker */;
+			targetProxy = 021555D622E60D0A003CD367 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		021555B022E5D3CE003CD367 /* Debug */ = {
@@ -176,10 +281,65 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/opencv/4.1.0_2/include/opencv4;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/opencv/4.1.0_2/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-I/usr/local/Cellar/opencv/4.1.0_2/include/opencv4/opencv",
+					"-I/usr/local/Cellar/opencv/4.1.0_2/include/opencv4",
+					"-L/usr/local/Cellar/opencv/4.1.0_2/lib",
+					"-lopencv_gapi",
+					"-lopencv_stitching",
+					"-lopencv_aruco",
+					"-lopencv_bgsegm",
+					"-lopencv_bioinspired",
+					"-lopencv_ccalib",
+					"-lopencv_dnn_objdetect",
+					"-lopencv_dpm",
+					"-lopencv_face",
+					"-lopencv_freetype",
+					"-lopencv_fuzzy",
+					"-lopencv_hfs",
+					"-lopencv_img_hash",
+					"-lopencv_line_descriptor",
+					"-lopencv_quality",
+					"-lopencv_reg",
+					"-lopencv_rgbd",
+					"-lopencv_saliency",
+					"-lopencv_sfm",
+					"-lopencv_stereo",
+					"-lopencv_structured_light",
+					"-lopencv_phase_unwrapping",
+					"-lopencv_superres",
+					"-lopencv_optflow",
+					"-lopencv_surface_matching",
+					"-lopencv_tracking",
+					"-lopencv_datasets",
+					"-lopencv_text",
+					"-lopencv_dnn",
+					"-lopencv_plot",
+					"-lopencv_videostab",
+					"-lopencv_video",
+					"-lopencv_xfeatures2d",
+					"-lopencv_shape",
+					"-lopencv_ml",
+					"-lopencv_ximgproc",
+					"-lopencv_xobjdetect",
+					"-lopencv_objdetect",
+					"-lopencv_calib3d",
+					"-lopencv_features2d",
+					"-lopencv_highgui",
+					"-lopencv_videoio",
+					"-lopencv_imgcodecs",
+					"-lopencv_flann",
+					"-lopencv_xphoto",
+					"-lopencv_photo",
+					"-lopencv_imgproc",
+					"-lopencv_core",
+				);
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -229,9 +389,64 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/opencv/4.1.0_2/include/opencv4;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/opencv/4.1.0_2/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-I/usr/local/Cellar/opencv/4.1.0_2/include/opencv4/opencv",
+					"-I/usr/local/Cellar/opencv/4.1.0_2/include/opencv4",
+					"-L/usr/local/Cellar/opencv/4.1.0_2/lib",
+					"-lopencv_gapi",
+					"-lopencv_stitching",
+					"-lopencv_aruco",
+					"-lopencv_bgsegm",
+					"-lopencv_bioinspired",
+					"-lopencv_ccalib",
+					"-lopencv_dnn_objdetect",
+					"-lopencv_dpm",
+					"-lopencv_face",
+					"-lopencv_freetype",
+					"-lopencv_fuzzy",
+					"-lopencv_hfs",
+					"-lopencv_img_hash",
+					"-lopencv_line_descriptor",
+					"-lopencv_quality",
+					"-lopencv_reg",
+					"-lopencv_rgbd",
+					"-lopencv_saliency",
+					"-lopencv_sfm",
+					"-lopencv_stereo",
+					"-lopencv_structured_light",
+					"-lopencv_phase_unwrapping",
+					"-lopencv_superres",
+					"-lopencv_optflow",
+					"-lopencv_surface_matching",
+					"-lopencv_tracking",
+					"-lopencv_datasets",
+					"-lopencv_text",
+					"-lopencv_dnn",
+					"-lopencv_plot",
+					"-lopencv_videostab",
+					"-lopencv_video",
+					"-lopencv_xfeatures2d",
+					"-lopencv_shape",
+					"-lopencv_ml",
+					"-lopencv_ximgproc",
+					"-lopencv_xobjdetect",
+					"-lopencv_objdetect",
+					"-lopencv_calib3d",
+					"-lopencv_features2d",
+					"-lopencv_highgui",
+					"-lopencv_videoio",
+					"-lopencv_imgcodecs",
+					"-lopencv_flann",
+					"-lopencv_xphoto",
+					"-lopencv_photo",
+					"-lopencv_imgproc",
+					"-lopencv_core",
+				);
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -240,6 +455,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/sharpie/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.geckoboard.sharpie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +466,50 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/sharpie/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.geckoboard.sharpie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		021555C222E5FEB2003CD367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		021555C322E5FEB2003CD367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		021555D422E60CDB003CD367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		021555D522E60CDB003CD367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -269,6 +531,24 @@
 			buildConfigurations = (
 				021555B322E5D3CE003CD367 /* Debug */,
 				021555B422E5D3CE003CD367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		021555C122E5FEB2003CD367 /* Build configuration list for PBXNativeTarget "create-marker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				021555C222E5FEB2003CD367 /* Debug */,
+				021555C322E5FEB2003CD367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		021555D322E60CDB003CD367 /* Build configuration list for PBXLegacyTarget "all-markers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				021555D422E60CDB003CD367 /* Debug */,
+				021555D522E60CDB003CD367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
